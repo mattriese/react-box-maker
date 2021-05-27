@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 function NewBoxForm({ addBox }) {
 
-//const initialState = { height: "", width: "", color: ""};
-const [formData, setFormData] = useState({});
+const initialState = { height: "", width: "", color: ""};
+const [formData, setFormData] = useState(initialState);
 
 // function: eventhandler for subitting form, calls the function that is passed in as a prop
 function handleSubmit(evt) {
 	evt.preventDefault();
 	addBox(formData);
-	setFormData({ height: "", width: "", color: ""});
+	setFormData(initialState);
 }
 
 // function to update local state with curr state of input elem
